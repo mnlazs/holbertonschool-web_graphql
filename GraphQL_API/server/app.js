@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// connect MongoDB Atlas database
+//Conectandome a la base de Datos de MongoDB
 const mongoDBAtlasUri = "mongodb+srv://mnlazs:SZXoel449PtcspvJ@cluster0.xgnwb1j.mongodb.net/"
 mongoose.connect(mongoDBAtlasUri, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
