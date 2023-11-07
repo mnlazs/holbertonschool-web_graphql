@@ -8,8 +8,8 @@ const {
   GraphQLNonNull
 } = require('graphql');
 // const _ = require('lodash'); // Used to find data in the dummy data
-const Project = require('../models/project');
-const Task = require('../models/task');
+const projectModel = require('../node_modules/project');
+const Task = require('../node_modules/task');
 
 // Dummy data for the tasks
 // const tasks = [
