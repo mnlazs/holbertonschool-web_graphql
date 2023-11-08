@@ -23,7 +23,7 @@ const Task = require('../node_modules/task');
 //     { id: '2', title: 'Bootstrap', weight: 1, description: 'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript design templates for typography, forms, buttons, navigation, and other interface components.'},
 // ];
 
-// Define the task type
+// Definicion del tipo Task con dos parametros
 const TaskType = new GraphQLObjectType({
   name: 'Task',
   fields: () => ({ // Using a function to avoid circular dependencies
@@ -42,7 +42,7 @@ const TaskType = new GraphQLObjectType({
   })
 });
 
-// Define the project type
+// Define the project type "GraphQLObjectType" con dos parametros (task-3)
 const ProjectType = new GraphQLObjectType({
   name: 'Project',
   fields: () => ({ // Using a function to avoid circular dependencies
@@ -102,7 +102,7 @@ const RootQuery = new GraphQLObjectType({
   }
 });
 
-// Define the mutation to add a task and project
+// Creando una nueva mutación GraphQLObjectType con el nombre Mutación (Task-7)
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
