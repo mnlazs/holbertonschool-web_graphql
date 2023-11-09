@@ -1,3 +1,5 @@
+<img src="image.png" alt="Descripción de la imagen" width="400" height="300" align="right">
+
 # Learning GraphQL with Apollo and MongoDB
 
 This project is designed to help you learn about GraphQL, Apollo, MongoDB, and how to connect them to build powerful, data-driven applications. By the end of this project, you should be able to explain the following concepts without the help of Google.
