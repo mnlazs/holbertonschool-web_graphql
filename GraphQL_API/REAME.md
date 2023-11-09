@@ -28,16 +28,16 @@ Before you begin, make sure you have Node.js and Redis installed on your machine
 ### How to Run Simple Operations with the Redis Client
 You can use the Redis CLI to perform simple operations. For example, to set a key and retrieve its value:
 
-# Set a key
+#### Set a key
 redis> SET mykey "Hello, Redis!"
 
-# Get the value
+### Get the value
 redis> GET mykey
 
 ### How to Use a Redis Client with Node.js for Basic Operations
 In your Node.js project, you can use the ioredis library to connect to a Redis server. Here's a basic example:
 
-const Redis = require('ioredis');
+ ```const Redis = require('ioredis');
 const redis = new Redis();
 
 (async () => {
@@ -45,4 +45,4 @@ const redis = new Redis();
   const value = await redis.get('example_key');
   console.log(value); // Output: 'Hello, Redis with Node.js'
 })();
-
+ ```
