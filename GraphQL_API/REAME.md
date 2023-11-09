@@ -1,4 +1,4 @@
-<img src="image.png" alt="Descripción de la imagen" width="400" height="300" align="right">
+<img src="image.png" alt="Descripción de la imagen" width="500" height="400" align="right">
 
 # Learning GraphQL with Apollo and MongoDB
 
