@@ -32,7 +32,8 @@ This project is designed to help you learn about GraphQL, Apollo, MongoDB, and h
 
 6. **How to Make Queries from React:**
    - You'll explore how to make GraphQL queries from a React application using Apollo Client. This involves sending GraphQL queries to the server, receiving data, and rendering it in your React components.
-   ```
+   
+```
    // Example GraphQL Query in React with Apollo Client
 import { useQuery } from '@apollo/client';
 import { GET_USER } from './queries';
