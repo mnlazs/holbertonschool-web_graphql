@@ -46,3 +46,64 @@ const redis = new Redis();
   console.log(value); // Output: 'Hello, Redis with Node.js'
 })();
  ```
+
+### How to Store Hash Values in Redis
+You can use Redis to store hash values. For example:
+```
+const redis = new Redis();
+const user = {
+  username: 'example_user',
+  email: 'user@example.com',
+};
+
+// Store the user's information as a hash
+redis.hmset('user:1', user);
+
+// Retrieve a specific field from the hash
+redis.hget('user:1', 'email').then((email) => {
+  console.log('Email:', email);
+});
+```
+
+### How to Deal with Async Operations with Redis
+Redis operations are often asynchronous. You can use Promises or async/await to handle async operations in Node.js. For example:
+
+```
+const redis = new Redis();
+
+(async () => {
+  try {
+    await redis.set('key', 'value');
+    const result = await redis.get('key');
+    console.log('Value:', result);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+})();
+
+```
+
+### How to Use Kue as a Queue System
+Kue is a popular job queue for Node.js applications. You can use it to manage background tasks. Example:
+
+```
+const kue = require('kue');
+const queue = kue.createQueue();
+
+queue.process('email', (job, done) => {
+  sendEmail(job.data.email, (err) => {
+    if (err) done(err);
+    else done();
+  });
+});
+
+const job = queue.create('email', { email: 'user@example.com' }).save();
+```
+
+### How to Build a Basic Express App Interacting with a Redis Server
+Check the provided app.js for an example of a basic Express app interacting with a Redis server.
+
+### How to Build a Basic Express App Interacting with a Redis Server and Queue
+See the app-with-queue.js for an example of an Express app that interacts with both a Redis server and a Kue queue for background tasks.
+
+This README provides a starting point for working with Redis and Node.js. Feel free to explore each topic in more depth for your specific use cases.
